@@ -3,8 +3,8 @@ spring:
     include: oauth
 
   datasource:
-    # MySQL ??
-    # url? ?? MySQL??? ?? ??
+    # MySQL Server
+    # url은 본인 MySQL서비로 변경
     url: jdbc:mysql://localhost:3306/jpa?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false & allowPublicKeyRetrieval=true
     username: root
     password:
@@ -12,13 +12,13 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create # ????? ?? ? ?? ?? (DROP + CREATE)
+      ddl-auto: create # 기존테이블 삭제 후 다시 생성 (DROP + CREATE)
     properties:
       hibernate:
-        #        show_sql: true # Hibernate? DB? ??? ?? ??(DDL, DML)? ????
-        format_sql: true # ???? ??? ??? ???
+        #        show_sql: true # Hibernate이 DB에 날리는 모든 쿼리(DDL, DML)를 보여준다
+        format_sql: true # 보여지는 쿼리를 예쁘게 포맷팅
 
 logging:
   level:
-    org.hibernate.SQL: debug # ??? ??
-    org.hibernate.type: trace # ?? JDBC ????? ????? ??
+    org.hibernate.SQL: debug # 퀴리를 기록
+    org.hibernate.type: trace # 모든 JDBC 매개변수를 기록하도록 설정
