@@ -29,7 +29,6 @@ public class SecurityConfig {
             .and()
                 .logout()
                 .logoutSuccessUrl("/") // logout 성공시 이동할 url 설정
-                .invalidateHttpSession(true).deleteCookies("JSESSIONID") // logout 후 쿠키제거
             .and()
                 .oauth2Login()
                 .loginPage("/loginForm") //로그인이 필요한데 로그인을 하지 않았다면 이동할 uri 설정
