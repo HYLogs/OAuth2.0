@@ -12,7 +12,6 @@ import java.util.Collection;
 import java.util.Map;
 
 @Getter
-@Setter
 public class PrincipalDetails implements OAuth2User {
     private Member member;
     private Map<String, Object> attributes;
