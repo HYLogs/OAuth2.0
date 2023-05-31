@@ -11,8 +11,7 @@
     </li>
     <li sec:authorize="isAuthenticated()">
           <span>
-          <a sec:authentication="principal.member.name"/>
-          (<a sec:authentication="principal.member.email"/>)님 안녕하세요!
+          <a sec:authentication="principal.member.name"/>님 안녕하세요!
           </span>
         <a href="/logout">로그아웃</a>
     </li>

@@ -16,8 +16,8 @@ public class Member {
     @Column(name = "member_id")
     private Long id; //기본키
     private String name; //유저 이름
-    private String email; //유저 구글 이메일
-    private String provider; //공급자 (google, facebook ...)
+    private String memberProviderId; // 공급자_공급 아이디
+    private String provider; //공급자 (google, github ...)
     private String providerId; //공급 아이디
 
     @Enumerated(EnumType.STRING)
@@ -25,9 +25,9 @@ public class Member {
     private Role role; //유저 권한 (관리자, 고객)
 
     @Builder
-    public Member(String name, String email, Role role, String provider, String providerId) {
+    public Member(String name, String memberProviderId, Role role, String provider, String providerId) {
         this.name = name;
-        this.email = email;
+        this.memberProviderId = memberProviderId;
         this.role = role;
         this.provider = provider;
         this.providerId = providerId;
